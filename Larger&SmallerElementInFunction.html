@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // var a = prompt("Enter a Number");
+        // var b = prompt("Enter a Number");
+        // var c = prompt("Enter a Number");
+        // var x;
+        // function x() {
+
+        //     if (a >= b && a >= c) {
+        //         document.write(`In ${a},${b},${c} Larger Number is: ${a}`);
+        //         console.log(a);
+        //     }
+        //     else if (b >= a && b >= c) {
+        //         document.write(`In ${a},${b},${c} Larger Number is: ${b}`);
+        //     }
+        //     else {
+        //         document.write(`In ${a},${b},${c} Larger Number is: ${c}`);
+        //     }
+        // }
+        // x();
+
+
+        var array = [4,6,4,5,9,21,8]
+        var a =Math.max(...array);
+        var b = Math.min(...array);
+        var max =array[0];
+        function check() {
+            for(var i=1; i<=array.length; i++){
+                if(array[i]>max){
+                    max = array[i]
+                }            
+            } 
+            document.write(`${array} Largest Number using function is: ${max} `,"<br>"); 
+            document.write(`Largest Number using Math.max(...array) is ${a} `,"<br>");  
+        }
+        check();
+
+        var min = array[0];
+        function check1() {
+            for(var j=1; j<=array.length; j++){
+                if(min>array[j]){
+                    min = array[j]
+                }
+            }
+            document.write(`${array} Smallest Number using function is: ${min} `,"<br>"); 
+            document.write(`Smallest Number using Math.min(...array) is ${b} `,"<br>");    
+        }
+        check1();
+    </script>
+</body>
+
+</html>
